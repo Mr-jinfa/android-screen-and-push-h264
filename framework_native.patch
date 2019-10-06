@@ -1,0 +1,24 @@
+diff --git a/services/surfaceflinger/DisplayDevice.cpp b/services/surfaceflinger/DisplayDevice.cpp
+index 3b16130..8b06751 100755
+--- a/services/surfaceflinger/DisplayDevice.cpp
++++ b/services/surfaceflinger/DisplayDevice.cpp
+@@ -14,7 +14,7 @@
+  * limitations under the License.
+  */
+ 
+-// #define LOG_NDEBUG 0
++#define LOG_NDEBUG 0
+ #undef LOG_TAG
+ #define LOG_TAG "DisplayDevice"
+ 
+@@ -532,8 +532,8 @@ void DisplayDevice::setProjection(int orientation,
+          && (getWidth() != frame.getWidth() || getHeight() != frame.getHeight()))
+         ) {
+         //If change the resolution,force scale to full screen.
+-        frame = Rect(0,0,getWidth(),getHeight());
+-        ALOGV("update frame [%d,%d]",frame.getWidth(),frame.getHeight());
++        //frame = Rect(0,0,getWidth(),getHeight());
++        //ALOGV("update frame [%d,%d]",frame.getWidth(),frame.getHeight());
+     }
+ #endif
+ 
